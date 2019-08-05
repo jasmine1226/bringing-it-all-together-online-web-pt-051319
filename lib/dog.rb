@@ -6,6 +6,12 @@ class Dog
     self.breed = breed
   end
 
+  def save
+    sql = <<-SQL
+
+    SQL
+  end
+
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS dogs (
