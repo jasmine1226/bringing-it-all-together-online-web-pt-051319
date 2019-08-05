@@ -65,6 +65,7 @@ class Dog
       puts "#{dog}"
     else
       dog = self.create(name: name, breed: breed)
+      puts "#{dog}"
     end
     dog
   end
