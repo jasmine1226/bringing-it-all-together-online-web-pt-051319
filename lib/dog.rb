@@ -36,11 +36,10 @@ class Dog
     dog.save
   end
 
-  def self.new_from_db
+  def self.new_from_db(row)
     sql = <<-SQL
       SELECT * FROM dogs
     SQL
-
     DB[:conn].execute(sql).map do |row|
     end
   end
