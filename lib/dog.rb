@@ -17,7 +17,7 @@ class Dog
     DB[:conn].execute("DROP TABLE dogs")
   end
 
-  def self.new_from_db
+  def self.new_from_db(row)
     sql = <<-SQL
     SQL
 
