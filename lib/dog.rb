@@ -33,6 +33,7 @@ class Dog
 
   def self.create(name, breed)
     dog = self.new(name, breed)
+    dog.save
   end
 
   def self.new_from_db
