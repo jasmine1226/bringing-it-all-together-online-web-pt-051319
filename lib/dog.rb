@@ -3,7 +3,8 @@ class Dog
 
   def self.create_table
     sql = <<-SQL
-      CREATE TABLE IF NOT EXISTS dogs (
+      DROP TABLE IF EXISTS dogs
+      CREATE TABLE (
         id INTEGER PRIMARY KEY,
         name TEXT,
         breed TEXT
@@ -11,5 +12,6 @@ class Dog
     SQL
     DB[:conn].execute(sql)
   end
+
 
 end
