@@ -32,12 +32,12 @@ class Dog
   end
 
   def self.create(input)
-    dog = self.new(name: input[:name])
-    input[:breed] = row[0]
+    dog = self.new(name: input[:name], breed: input[:breed])
     dog.save
   end
 
   def self.new_from_db(row)
-    dog = self.new(name: row[1], breed: row[0], id: row[0])
+    dog = self.new(name: row[1], breed: row[2])
+    dog.id = row[0]
   end
 end
