@@ -37,10 +37,6 @@ class Dog
   end
 
   def self.new_from_db(row)
-    sql = <<-SQL
-      SELECT * FROM dogs
-    SQL
-    DB[:conn].execute(sql).map do |row|
-    end
+    dog = self.new(name: row[1], breed: row[0], id: row[0])
   end
 end
