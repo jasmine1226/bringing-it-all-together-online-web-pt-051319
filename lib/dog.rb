@@ -53,6 +53,6 @@ class Dog
     end.first
   end
 
-  def find_or_create_by(id)
+  def find_or_create_by(name:, breed:)
   end
 end
