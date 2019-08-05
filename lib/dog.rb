@@ -32,7 +32,8 @@ class Dog
   end
 
   def self.create(input)
-    dog = self.new(name: input[:name], breed: input[:breed])
+    dog = self.new(name: input[:name])
+    input[:breed] = row[0]
     dog.save
   end
 
