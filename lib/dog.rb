@@ -59,7 +59,6 @@ class Dog
       WHERE name = ? AND breed = ?
     SQL
     dog = DB[:conn].execute(sql, name, breed)
-    puts "dog = #{dog}"
     if !dog.empty?
       dog = self.new_from_db(dog[0])
     else
