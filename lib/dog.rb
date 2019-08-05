@@ -66,7 +66,8 @@ class Dog
       puts dog.id
     else
       dog = self.create(name: name, breed: breed)
-      puts "#{dog.id}"
+      puts dog.name
+      puts dog.id
     end
     dog
   end
